@@ -1,0 +1,39 @@
+Usecases:
+
+1. Eine Verzeichnisstruktur auf einem Rechner soll mit Verzeichnisstrukturen anderer Rechner verknüpft werden können:
+
+1.1. Als Eins-zu-Eins Verbindung:
+Es werden alle Dateien des einen Rechners mit den Dateien des anderen Rechners in der gleichen Verzeichnisstruktur synchronisiert.
+Operationen auf beiden Verzeichnisstrukturen werden auf den anderen Rechner übertragen, Konflikte werden auf die vom Anwender gewählte Art gelöst.
+
+1.2. Dateigleichheit Verbindung:
+Es werden alle Dateien des einen Rechners mit den Dateien des anderen Rechners ohne Pfadänderungen synchronisiert.
+Operationen auf beiden Verzeichnisstrukturen werden auf den anderen Rechner übertragen, Konflikte werden auf die vom Anwender gewählte Art gelöst.
+Neue Dateien des Quellrechners werden in einem Standardverzeichnis gespeichert.
+
+1.3 Repository Verbindung:
+Es werden keine Dateien transferiert.
+Der Benutzer kann Daeien und Verzeichnisse zum Transfer wählen, die mit der Quelle verbunden bleiben.
+Ändern sich Dateien oder Verzeichnisse, werden diese Änderungen an den Zielrechner übertragen.
+Der Benutzer kann aus einer Liste der Dateien und Verzeichnisse der Quelle wählen. Diese werden an das Ziel an eine vom Benutzer gewählte Position transferiert.
+
+2. Konfliktlösungsarten
+2.1. Löschen einzelner Dateien
+2.2. Kopieren einzelner Dateien von einer bestimmten Quelle
+2.3. Übernahme aller Änderungen einer bestimmten Quelle (verwirft im Konflikt stehende Änderungen der Ziele)
+2.4. Übernahme der Neuerstellungen einer bestimmten Quelle (verwirft Löschungen der Ziele)
+2.5. Übernahme der Dateiänderungen einer bestimmten Quelle (verwirft Änderungen der Ziele)
+
+3. Wechsel der Verknüpfungen
+Ein Wechsel der Verknüpfung erfolgt mit kleinstmöglichen Änderungen:
+Es wird mit möglichst wenig Dateiverschiebungen der Wechsel erreicht.
+Werden Erstellungen nötig, werden möglichst wenige Daten transferiert.
+Werden Löschungen nötig, werden möglichst wenige durchgeführt.
+
+4. Äquivalenzen
+Einzelne oder Gruppen von Dateien können als Äquivalent anderer einzelner oder als Gruppe vorliegender Dateien markiert werden.
+Änderungen werden dem Benutzer mitgeteilt. Er kann dann eine existierende Alternative auf seinen Rechner transferieren.
+Äquivalente Dateien oder Dateigruppen stehen nicht mehr als Zusatzdateien zur Auswahl
+
+5. Filter
+Der Benutzer kann bestimmte Dateien und Verzeichnisse der Änderungsliste oder der Neuigkeitsliste von der Anzeige ausnehmen.
